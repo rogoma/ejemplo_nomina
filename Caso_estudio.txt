@@ -1,0 +1,28 @@
+CASO DE ESTUDIO  - JAVA EE
+
+1- Desarrollo de la aplicación
+Desarrollar un backend que permita gestionar la información de nómina para los empleados de una empresa. Para suplir lo solicitado por el cliente se debe desarrollar con éxito los siguientes puntos:
+
+1.1. Modelo Relacional
+Sincronizar el MER facilitado por el instructor
+
+1.2. Requerimientos
+La persona encargada de administrar el aplicativo requiere realizar un backend con la siguiente lógica:
+
+Se debe tener 2 (dos) roles: ADMIN y USER.
+Debe tener un usuario por defecto con los roles de ADMIN y USER.
+Se debe permitir el registro de usuarios en el sistema. (Se debe tener en cuenta que no se permiten usuarios con el mismo número de documento o email).
+El sistema debe calcular el sueldo_devengado: (sueldo_basico / 30 * días laborados)
+El sistema debe calcular el auxilio de transporte teniendo en cuenta lo siguiente: El salario mínimo es 2.041.000. Para que un empleado tenga derecho a auxilio de transporte debe ganar igual o menos que 2 (dos) salarios mínimos. Si el empleado tiene derecho al auxilio de transporte se debe pagar proporcionalmente a los dias_laborados.
+El sistema debe calcular el valor de las horas extras (Para este caso pagar por concepto de horas extras el 10% del sueldo_devengado).
+El sistema debe calcular el total_devengado (sueldo_devengado + aux_transporte + horas_extras).
+El sistema debe calcular el aporte a salud por empleado (Para este concepto se debe restar el aux_transporte al total_devengado y el resultado multiplicarlo por el 4%).
+El sistema debe calcular el aporte a salud por empleado (Para este concepto se debe restar el aux_transporte al total_devengado y el resultado multiplicarlo por el 6%).
+El sistema debe calcular los descuentos adicionales (Para este caso asignar un valor de 300.000 gs)
+El sistema debe calcular el fondo_solidaridad (Se debe tener en cuenta que un empleado debe pagar por fondo_solidaridad el 1% del total devengado si su sueldo_basico supera o es igual a 4 salarios mínimos.
+El sistema debe calcular el total_descuentos (aporte_salud + aporte_pension + fondo_solidaridad + descuentos_adicionales)
+El sistema debe calcular el neto a pagar (total_devengado - total_descuento)
+La información adicional requerida se puede agregar manualmente a la Base de Datos.
+
+1.3. Requisitos técnicos
+Desarrollar un backend JAVA que permita dar solución a los requerimientos de la empresa, utilizando el IDE Netbeans, Java como lenguaje de Programación, Jersey para los REST y JPA como ORM*
